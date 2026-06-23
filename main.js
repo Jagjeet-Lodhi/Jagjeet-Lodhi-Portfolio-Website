@@ -6,6 +6,35 @@ var typed = new Typed(".text", {
     loop: true
 });
 
+
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+
+// Toggle active menu visibility when the corner icon is clicked
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('bx-x'); // Smoothly switch icon look if Boxicons is synced
+    navbar.classList.toggle('active');
+});
+
+// Close the floating mobile menu layout when selecting an option target
+const navLinks = document.querySelectorAll('.navbar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
+// Reset logic if viewport is resized back to desktop proportions
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    }
+});
+
+
+
 const form = document.getElementById("contactForm");
 const msg = document.getElementById("successMsg");
 
