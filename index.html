@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("ainwRta2vqO5LBhBl");
+    </script>
+
 </head>
 <body>
     <header class="header">
@@ -36,10 +42,13 @@
             </p>
             <div class="home-sci">
                 <a href="https://www.linkedin.com/in/jagjeet-lodhi-364659210/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BEuWfPMvjS5arQ1jjNOd35g%3D%3D" target="_blank" style="--i:7"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/officialjagjeetlodhi?igsh=MXhuYm4zcnAwaDV1Yw%3D%3D" target="_blank" style="--i:8"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/Jagjeet-Lodhi" target="_blank" rel="noopener noreferrer" style="--i:8"><i class='bx bxl-github'></i></a>
                 <a href="https://wa.me/916265495874" target="_blank" rel="noopener noreferrer" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
             </div>
-            <a href="#about" class="btn-box">More About Me</a>
+            <div class="home-buttons">
+                <a href="#about" class="btn-box">More About Me</a>
+                <a href="Jagjeet_Lodhi_Resume.pdf" download class="resume-btn"> <span>Download Resume</span> <i class='bx bxs-download' ></i> </a>
+            </div>
         </div> 
  
         <span class="home-imgHover"></span>
@@ -299,11 +308,11 @@
         </div>
 
         <div class="contact-form">
-            <form action="" id="contactForm">
-                <input type="text" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your Email" required>
-                <input type="text" placeholder="Enter Your Subject">
-                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email"  name="email" placeholder="Enter Your Email" required>
+                <input type="text" name="title" placeholder="Enter Your Subject">
+                <textarea name="message" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
                 <input type="submit" value="submit" class="send">
                 <p id="successMsg" style="color: lightgreen; display: none; margin-top: 15px; text-align: center; font-size: 25px; font-weight: 550;">
                     Thank you for Contact!
@@ -313,7 +322,7 @@
     </section>
 
     <div class="last-text">
-        <p>Developed with love by Jagjeet Lodhi @ 2026</p>
+        <p>Designed & Developed by <strong>Jagjeet Lodhi</strong> © 2026. All Rights Reserved.</p>
     </div>
     <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
 
