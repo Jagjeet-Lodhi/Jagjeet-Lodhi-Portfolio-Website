@@ -962,6 +962,7 @@ body {
         height: 100%; 
         padding: 12px 15px; 
         padding-top: 60px;
+        text-align: left;
     }
 
     .layer h5 {
@@ -971,7 +972,9 @@ body {
 
     .layer p {
         font-size: 0.85rem; 
-        line-height: 1.3;
+        line-height: 1.2;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .layer i {
