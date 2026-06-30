@@ -33,26 +33,27 @@ window.addEventListener('resize', () => {
     }
 });
 
+//  Portfolio Form Details Send on Gmail 
 
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-const form = document.getElementById("contactForm");
-const msg = document.getElementById("successMsg");
+    emailjs.sendForm(
+        "service_x7wgpgd",   // your service ID
+        "template_1x7jqaq",  // your template ID
+        this
+    ).then(() => {
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault(); // stop page reload
+        const msg = document.getElementById("successMsg");
+        msg.style.display = "block";
 
-    // show success message
-    msg.style.display = "block";
+        setTimeout(() => {
+            msg.style.display = "none";
+        }, 3000);
 
-    // hide message after 2 seconds and scroll to home
-    setTimeout(() => {
-        msg.style.display = "none";
+        this.reset();
 
-        document.getElementById("home").scrollIntoView({
-            behavior: "smooth"
-        });
-    }, 2000);
-
-    // reset form
-    form.reset();
+    }).catch((error) => {
+        console.log("FAILED...", error);
+    });
 });
